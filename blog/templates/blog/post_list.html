@@ -14,9 +14,15 @@
     </nav>
 
     <div>
-      <p>Posts will go here one day. Or other stuff, ya know.</p>
+      {% for post in posts %}
+        <div>
+          <p>published: {{ post.published_date }} </p>
+          <h2><a href= "">{{ post.title }}</a></p>
+          <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+      {% endfor %}
     </div>
-    
+
   </body>
 
 </html>
